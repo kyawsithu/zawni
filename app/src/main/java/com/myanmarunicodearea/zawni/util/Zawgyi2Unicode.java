@@ -151,7 +151,8 @@ public class Zawgyi2Unicode {
 
         return output_text;
     }
-
+ //isUnicodeCheck and isZawgyiCheck are based on algorithm of Font buster developed by Ko Ravi and Font Tagger developed by Ko Thant Thet Khin Zaw.
+ //Copy Regex and paste them in this function. ;)
     static public boolean isUnicodeCheck(String input_text) {
         Pattern uniPattern = Pattern
                 .compile("[ဃငဆဇဈဉညဋဌဍဎဏဒဓနဘရဝဟဠအ]်|ျ[က-အ]ါ|ျ[ါ-း]|[^\u1031]စ်|\u103e|\u103f|\u1031[^\u1000-\u1021\u103b\u1040\u106a\u106b\u107e-\u1084\u108f\u1090]|\u1031$|\u1031[က-အ]\u1032|\u1025\u102f|\u103c\u103d[\u1000-\u1001]|ည်း|ျင်း|င်|န်း|ျာ|[ာ်ါ]တ်|ြို");
